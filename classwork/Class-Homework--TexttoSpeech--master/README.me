@@ -1,0 +1,66 @@
+CSC 2/412: Human-Computer Interaction
+Homework 5 (to be worked individually)
+Assigned: 20 Oct, 2017
+Due: 27 Oct, 2017 (by midnight)
+Total number of points: 100
+Speech Recognition
+For this assignment, you will be utilizing the Google Web Speech API to create a set of applications. You will be making 1) an application which detects the user’s speaking rate and provides feedback to the user if they are speaking too slow, too fast, etc. The feedback can be presented any way you like, e.g. by graphs or by text. 2) an automated agent that responds appropriately to the user similar to the automated systems  you encounter on the phone.  3) a search engine using voice recognition. You can use the existing Web Speech API demo as a starting place. 
+
+
+Task 1:  Speaking Rate Detection and Feedback
+
+Implement the capability to calculate and display the speaking rate of the user in words per minute. Warn the user that they are speaking too slowly when their speaking rate falls under 133 words/minute, and warn them that they are speaking too quickly when they speak at more than 188 words/minute. 
+
+Tips:
+●	Keep a running count of the words spoken per subinterval of time over some total period of time, e.g. words spoken within every 5 seconds for the last 30 seconds. You can look at the change in the number of words in the final_transcript variable between every time interval. It would help to store the counts in an array and to find the sum during updates. 
+
+
+
+
+Task 2: Automated Agent
+
+Develop an automated phone agent for a technical company using the API, you can choose any service as context (i.e Comcast). The automated agent should have minimally the following capability and behavior:
+
+Greeting -> list available options
+Account Information
+     -> check balance  -> pay balance  -> payment process
+     -> pay balance -> payment process
+Technical Support
+     “please briefly describe your problem” -> listen to any problem -> “have you tried turning  
+      it off and no?” 
+	-> Yes -> “We will connect you to the next available technical agent” -> [end]
+	-> No -> “Try turning it off and on.”  ->  “Did it work?” 
+		-> Yes -> “I’m glad I could help. Have a good day.”
+		-> No -> “We will connect you to the next available technical agent” -> [end]
+Product Information
+      list the available products -> ask if they would like to purchase any product -> listen for a  
+      product name 
+	-> if it exists -> payment process
+	-> otherwise -> ask for another response
+
+* Payment process -> ask to provide the digits of the credit card -> ask for expiration date of the credit card -> ask for the security code in the back 
+(For the credit card and security code, simply check if 12 numbers and 3 numbers were said recently respectively..)
+
+After not recognizing a response from the caller multiple times, the automated machine should direct the caller to an available agent (i.e “It seems like I’m unable to help you, I will connect you to the next available agent, please wait.”).  -> [end]
+
+
+
+Task 3: Okay Google: 
+Okay Google uses voice recognition to search without typing. 
+ 
+Implement Okay Google. The behavior should look like the video: https://www.youtube.com/watch?v=dDvP5ab9v30, you may design the UI to look as close to the real thing.
+
+Instructions:
+1.	Sign up for a free version of the custom search engine here.
+2.	Change the site to search in your setup from “search included sites” to “search the entire web but emphasize included sites”
+3.	You will be given a snippet of code. Add it to your voice recognition code.
+4.	Add the following code to your javascript:
+  var search;
+  window.onload = function() {
+     search = google.search.cse.element.getElement('searcher');
+     console.log(search);
+
+  };
+      4.    Modify 
+<gcse:search></gcse:search> with 
+<gcse:search gname="searcher"></gcse:search>
