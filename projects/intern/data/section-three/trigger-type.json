@@ -1,0 +1,5 @@
+[
+  { "label": "Special Term / Run-off Reinsurer", "value": false },
+  { "label": "Is Transre responsible to notify the cedant?", "value": false },
+  { "label": "Can Transre trigger special termination?", "value": false }
+]

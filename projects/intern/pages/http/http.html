@@ -1,0 +1,30 @@
+<ion-header>
+  <ion-navbar no-border-bottom>
+    <ion-title>Sample Data</ion-title>
+    <button menuToggle>
+    <ion-icon name="menu"></ion-icon>
+  </button>
+  </ion-navbar>
+</ion-header>
+
+
+<ion-content padding style="background-color: #F8F8F8;">
+    <h1>Sample Data!</h1> <br>
+    <h2>Foods</h2>
+    <ul>
+        <li *ngFor="let food of foods">{{food.name}}</li>
+    </ul>
+    <h3>Books</h3>
+    <ul>
+        <li *ngFor="let book of books">{{book.title}}</li>
+    </ul>
+    <h3>Movies</h3>
+    <ul>
+        <li *ngFor="let movie of movies">{{movie.title}}</li>
+    </ul>
+
+    <br>
+
+    <h5>Sushi should be printed below:</h5>
+    <h5>{{sushi}}</h5>
+</ion-content>

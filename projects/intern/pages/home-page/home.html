@@ -1,0 +1,37 @@
+<ion-header>
+  <ion-navbar>
+    <button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+
+    <ion-title>
+      Home Page
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding class="home">
+<img src="build/images/transre.png" alt="TransRe Logo" class="logo">
+<ion-list class="main-content">
+  <ion-list-header>
+    <span style="color: #253C98; font-weight: 600">Search Contracts</span>
+    </ion-list-header>
+    <ion-item>
+      <ion-label style="color: #666666">Treaty Number: </ion-label>
+      <ion-input type="text" placeholder="enter treaty #" [(ngModel)]="claimKey"  item-right style="border:1px solid lightgray"></ion-input>
+    </ion-item>
+    <ion-row responsive-sm class="search-bar">
+      <ion-col>
+        <button (click)="searchContract()" primary block><ion-icon name="search" style="margin-bottom: 1%; margin-right: 1%"></ion-icon>Search</button>
+      </ion-col>
+    </ion-row>
+</ion-list>
+
+<button med_blue style="border-radius: 6px" class="button-ios-rounded">
+  <ion-icon [ngStyle]="{color: thumb}" name="ios-thumbs-up"></ion-icon>
+</button>
+<button med_blue style="border-radius: 6px" class="button-ios-rounded">
+  <ion-icon [ngStyle]="{color: heart}" name="md-heart"></ion-icon>
+</button>
+<button med_blue small (click)="changeStyle()">CLICK ME</button>
+</ion-content>

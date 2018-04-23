@@ -1,0 +1,16 @@
+[
+  {
+    "title": "General 1",
+    "data": [
+      {"label": "Authorization Line", "value": false },
+      {"label": "Actual Signed Line", "value": false }
+    ]
+  },
+  {
+    "title": "General 2",
+    "data": [
+      {"label": "Acturial Flag", "value": false },
+      { "label": "Actuary Name", "value": false }
+    ]
+  }
+]

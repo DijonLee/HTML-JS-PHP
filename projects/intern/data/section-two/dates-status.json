@@ -1,0 +1,13 @@
+[
+  {
+    "title": "Dates & Status",
+    "data_one": [
+      {"label": "Effective Date", "value": false},
+      {"label": "Expiration Date", "value": false}
+    ],
+    "data_two": [
+      {"label": "Term", "value": "no"},
+      {"label": "Continuous", "value": "na"}
+    ]
+  }
+]

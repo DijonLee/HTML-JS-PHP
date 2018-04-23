@@ -1,0 +1,198 @@
+<ion-header>
+  <ion-navbar>
+    <button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>
+      New Contract
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content class="contract-slides">
+<ion-slides #slider pager>
+<!-- Underwriter Info -->
+<ion-slide>
+<ion-content>
+  <ion-toolbar></ion-toolbar>
+  <h5 style="margin-top: 18px;">Underwriter Info</h5>
+  <ion-list>
+  <ion-item *ngFor="let item of UWData">
+      <ion-label stacked>{{item.label}}</ion-label>
+      <ion-input type="text" [(ngModel)]="item.value"></ion-input>
+  </ion-item>
+  <ion-item *ngFor="let item of date">
+      <ion-label stacked>Date</ion-label>
+      <ion-datetime displayFormat="MMM DD YYYY" [(ngModel)]="item.value"></ion-datetime>
+  </ion-item>
+  </ion-list>
+</ion-content>
+</ion-slide>
+<!-- Section 1 -->
+<ion-slide class="section-one">
+<ion-content>
+  <ion-toolbar></ion-toolbar>
+  <h5>Section 1</h5>
+  <ion-card *ngFor="let item of GeneralOneTwo">
+  <ion-card-content>
+    <ion-list-header class="title">{{item.title}}</ion-list-header>
+    <ion-list *ngFor="let data of item.data">
+    <ion-item class="item-select" style="text-align: center">
+      <ion-label class="item-label">{{data.label}}</ion-label>
+    </ion-item>
+    <ion-item class="item-select">
+      <ion-label style="text-align: center;">TIRS Sample Data</ion-label>
+      <ion-toggle primary [(ngModel)]="data.value"></ion-toggle>
+    </ion-item>
+    </ion-list>
+  </ion-card-content>
+  </ion-card>
+  <ion-card class="general-3">
+  <ion-card-content>
+    <ion-list-header class="title">General 3</ion-list-header>
+    <div *ngFor="let item of GeneralThree">
+    <ion-list-header class="list-header">{{item.title}}</ion-list-header>
+    <ion-list class="select">
+    <ion-item class="item-select">
+      <ion-label class="item-label">TIRS Sample Data</ion-label>
+    </ion-item>
+    <ion-item class="item-select" *ngFor="let data of item.data">
+      <ion-label>{{data.label}} </ion-label>
+      <!--<ion-label class="label-data">Data goes here</ion-label>-->
+      <ion-select placeholder="Select" [(ngModel)]="data.option">
+        <ion-option value="yes">Yes</ion-option>
+        <ion-option value="no">No</ion-option>
+        <ion-option value="na">N/A</ion-option>
+      </ion-select>
+    </ion-item>
+    </ion-list>
+    </div>
+  </ion-card-content>
+  </ion-card>
+</ion-content>
+</ion-slide>
+<!-- Section 2-->
+<ion-slide>
+<ion-content>
+  <ion-toolbar></ion-toolbar>
+  <h5>Section 2</h5>
+  <ion-card>
+  <ion-card-content>
+    <ion-list-header class="title">Risk Transfer</ion-list-header>
+    <ion-list>
+      <ion-item class="item-select" style="text-align: center">
+        <ion-label>TIRS Sample Data</ion-label>
+      </ion-item>
+    </ion-list>
+    <ion-label secondary stacked>Exempt?</ion-label>
+    <!-- toggleFalse() should return and save the value of exempt as false -->
+    <button id="exempt-yes" small style="width: 45%; height: 2.3em; display: inline-block; margin-top: 3%" outline [class.exempt-button]="riskExempt == true" (click)="exempt()">
+      Yes
+    </button>
+    <!-- radioChecklist prompts the user to select from one of the options -->
+    <button id="exempt-no" small style="width: 45%; height: 2.3em; display: inline-block; margin-top: 3%" outline [class.exempt-button]="riskExempt == false" (click)="notExempt()">
+      No
+    </button>
+  </ion-card-content>
+  </ion-card>
+
+  <ion-card>
+  <ion-card-content *ngFor="let item of CedingCompany">
+    <ion-list-header class="title">{{item.title}}</ion-list-header>
+    <ion-list>
+      <ion-item class="item-select" style="text-align: center">
+        <ion-label class="item-label">{{item.label}}</ion-label>
+      </ion-item>
+      <ion-item class="item-select">
+        <ion-label>TIRS Sample Data</ion-label>
+        <ion-select placeholder="Select" [(ngModel)]="item.option">
+          <ion-option value="yes">Yes</ion-option>
+        <ion-option value="no">No</ion-option>
+        <ion-option value="na">N/A</ion-option>
+      </ion-select>
+      </ion-item>
+    </ion-list>
+  </ion-card-content>
+  </ion-card>
+
+  <ion-card>
+  <ion-card-content *ngFor="let item of DatesStatus">
+    <!-- [hidden] which shows/hides the information if exemption is evaluated to false! -->
+    <ion-list-header class="title">{{item.title}}</ion-list-header>
+    <ion-list *ngFor="let data_one of item.data_one">
+    <ion-item class="item-select" style="text-align: center">
+      <ion-label class="item-label">{{data_one.label}}</ion-label>
+    </ion-item>
+    <ion-item class="item-select">
+      <ion-label>TIRS Sample Data</ion-label>
+      <ion-toggle primary [(ngModel)]="data_one.value"></ion-toggle>
+    </ion-item>
+    </ion-list>
+    <ion-list *ngFor="let data_two of item.data_two">
+    <ion-item class="item-select" style="text-align: center">
+      <ion-label class="item-label">{{data_two.label}}</ion-label>
+    </ion-item>
+    <ion-item class="item-select">
+      <ion-label>TIRS Sample Data</ion-label>
+        <ion-select placeholder="Select" [(ngModel)]="data_two.value">
+          <ion-option value="yes">Yes</ion-option>
+          <ion-option value="no">No</ion-option>
+          <ion-option value="na">N/A</ion-option>
+      </ion-select>
+    </ion-item>
+    </ion-list>
+  </ion-card-content>
+  </ion-card>
+
+</ion-content>
+</ion-slide>
+
+<ion-slide>
+<ion-content>
+  <ion-toolbar></ion-toolbar>
+  <h5>Section 3 </h5>
+  <ion-card>
+  <ion-card-content>
+    <ion-list-header class="title">Trigger Types</ion-list-header>
+    <div *ngFor="let item of triggerTypes">
+    <ion-list>
+    <ion-item class="item-label">
+      <ion-label>{{item.label}}</ion-label>
+    </ion-item>
+    <ion-item class="item-select">
+      <ion-label>TIRS Data will go here</ion-label>
+      <ion-toggle primary [(ngModel)]="item.value"></ion-toggle>
+    </ion-item>
+    </ion-list>
+    </div>
+  </ion-card-content>
+  </ion-card>
+
+  <ion-card>
+  <ion-card-content>
+    <ion-list-header> <!-- Clicking anywehre in the label field will trigger an ngif to show/hide the drop down items -->
+      <ion-label (click)="showDropDown()">
+        <ion-icon med_blue name="ios-arrow-down" style="font-size: 1.3em; font-weight: bold" *ngIf="dropDownToggle == false"></ion-icon>
+        <!-- <button small outline style=" margin: 4px 8px 10px 0;" *ngIf="dropDownToggle == false">{{dropDownText}}</button> -->
+        <p class="title" style="display: inline-block; padding: 0" [class.drop-down]="dropDownToggle == true">Drop Downs</p>
+      </ion-label>
+    </ion-list-header>
+    <div *ngIf="dropDownToggle == true">
+    <div *ngFor="let item of dropDown; let i = index">
+    <ion-list>
+    <ion-item class="item-label" (click)="openModal({charNum: i})">
+      <ion-label> <!-- <ion-icon name="create"></ion-icon> -->
+      {{item.label}}</ion-label> <!-- add (click) function to trigger the modals to their respective labels -->
+    </ion-item>
+    <ion-item class="item-select">
+      <ion-label>TIRS Sample Data</ion-label> <!-- style="margin-left: 20%" -->
+    </ion-item>
+    </ion-list>
+    </div> </div>
+  </ion-card-content>
+  </ion-card>
+</ion-content>
+</ion-slide>
+
+</ion-slides>
+</ion-content>

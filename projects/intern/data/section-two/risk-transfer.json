@@ -1,0 +1,25 @@
+[
+  {
+    "title": "Risk Transfer",
+    "exempt": "",
+    "yes": "true",
+    "data": [
+      {"label": "Multi-Year Treaties", "value": false},
+      {"label": "Experience Accounts", "value": false},
+      {"label": "Profit & Loss Sharing", "value": false},
+      {"label": "Sliding Scale Comm", "value": false},
+      {"label": "Non-stand Cancel", "value": false},
+      {"label": "Loss Ratio Cap", "value": false},
+      {"label": "Fund Help Prov", "value": false},
+      {"label": "Premium Adjustment Features", "value": false},
+      {"label": "Deferred Prem", "value": false},
+      {"label": "Retrospect Cover", "value": false},
+      {"label": "Adjust Limits & or Att. Points", "value": false},
+      {"label": "Mandatory Renewals", "value": false},
+      {"label": "Dual Trigger Prov", "value": false},
+      {"label": "Blended Coverage", "value": false},
+      {"label": "Embedded Deriv", "value": false},
+      {"label": "Affiliated Reinsurance", "value": false}
+    ]
+  }
+]

@@ -1,0 +1,27 @@
+[
+  {
+    "title": "Terrorism Exposure",
+    "data": [
+      {"label": "Included:", "option": "" }, 
+      {"label": "Excluded:", "option": "" },
+      {"label": "Silent:", "option": "" }
+    ]
+  },
+  {
+    "title": "Covered Source",
+    "data": [
+      {"label": "Domestic Personal:", "option": "" },
+      {"label": "Domestic Commercial:", "option": "" },
+      {"label": "Foreign Personal:", "option": "" },
+      {"label": "Foreign Commercial:", "option": "" }
+    ]
+  },
+  {
+    "title": "Covered Type",
+    "data": [
+      {"label": "Conventional:", "option": "" },
+      {"label": "Conventional:", "option": "" },
+      {"label": "NCBR:", "option": "" }
+    ]
+  }
+]

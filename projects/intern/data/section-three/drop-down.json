@@ -1,0 +1,16 @@
+[
+  { "label": "Run-off Company", "value": false },
+  { "label": "Loss of License", "value": false },
+  { "label": "Insolvent, Liquidation, Receivership, Supervision, Etc.", "value": false },
+  { "label": "Surplus Reduction", "value": false },
+  { "label": "AM Best", "value": false },
+  { "label": "S & P", "value": false },
+  { "label": "Change of Control/Ownership", "value": false },
+  { "label": "Moodys", "value": false },
+  { "label": "Failed IRIS Test", "value": false },
+  { "label": "Company Ceases Writing Business under class or contract", "value": false },
+  { "label": "Reinsured Entire Liability without Company prior written consent", "value": false },
+  { "label": "Paid Up Capital", "value": false },
+  { "label": "Other", "value": false },
+  { "label": "Failure to Comply", "value": false }
+]
