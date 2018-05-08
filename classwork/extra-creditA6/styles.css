@@ -1,0 +1,32 @@
+
+/**********    Viewport             **********/
+.container { /* Contain Text to ViewPort */
+margin: 0 auto;
+width: 85%;
+max-width:1000px;
+}
+
+h1,h2,h3,h4,h5,h6{
+	  font-family: 'Marcellus SC';
+
+}
+
+
+nav.navbar {
+background-color:#9F9438!important;
+}
+ul li a
+{
+	color:white!important;
+}
+
+/****** IMAGE FLOAT LEFT TEXT RIGHT ************/
+main section img {
+	    float: left;
+
+}
+
+main section h3 {
+	    margin-left: 210px
+
+}
