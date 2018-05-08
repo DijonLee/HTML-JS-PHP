@@ -1,0 +1,194 @@
+/* CSS for the NYC website */
+
+@import url('https://fonts.googleapis.com/css?family=Cinzel:400,700|Open+Sans+Condensed:300');
+
+/* *** Base ********************* */
+body {
+	background-image: url(../images/nyc-seal.png);
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	background-size: 175px 175px;
+	background-position: top center;
+}
+h1, h2, h3, h4, h5, h6, th {
+	margin-top: 0;
+	color: black;
+	font-family: 'Cinzel', serif;
+	/*font-family: Helvetica, Arial, sans-serif;*/
+	font-size: 1.3em;
+	letter-spacing: 0.2em;
+	text-align: left;
+}
+h2 {
+	background-color: #9F9438;
+	opacity: 0.7;
+	box-shadow: 5px 5px 10px 0 #cccccc;
+	border-radius: 5px;
+	color: white;
+	letter-spacing: 1px;
+	font-weight: normal;
+	padding: 10px;
+
+	/* background image… */
+	background-image: url("../images/seal-bullet.png");
+	background-repeat: no-repeat;     
+	background-position: 10px center;
+	padding-left: 50px;
+}
+p, ol, ul, td {
+  color: black;
+  font-family: 'Open Sans Condensed', sans-serif;
+  /*font-family: Palatino, Times, serif;*/
+  font-size: 1em;
+  line-height: 1.5em;
+  letter-spacing: 0.05em;
+  text-align: left;
+}
+img {
+  border: 1px solid black;
+  width: 100%;
+}
+
+/* ------- Links -------- */
+a {
+	text-decoration: underline;
+	color: black;
+	transition: all 500ms;
+}
+a:hover {
+	color: white;
+	background: #9F9438;
+}
+a:active { text-decoration: none; }
+
+/* ------- Table -------- */
+table { width: 100%; }
+th { 
+	height: 2.8em; 
+	background-color: white;
+}
+tr { background-color: #a3a3a3; }
+tr:nth-child(odd) { background-color: #d3d3d3; }
+td { padding: 8px; }
+
+/* *** Modules ****************** */
+.topics {
+	display: flex;
+	justify-content: space-between
+}
+.topics > section {
+	flex-basis: calc(33% - 15px);
+}
+.wide {
+	display: flex;
+}
+.wide > section:first-child {
+	flex-shrink: 0;
+	margin-right: 25px;
+}
+
+.large { 
+	border-top: 1px solid #9f6138; 
+	padding-top: 12px;
+}
+
+/* *** Layout ******************* */
+.container {
+	margin: 0 auto;
+	width: 90%;
+	max-width: 960px;
+}
+
+/* ----- Page Header ----- */
+.page-header h1 { 
+	margin: 15px 0 0; 
+	font-size: 1.7em;
+}
+.page-header a { 
+	text-decoration: none; 
+	padding: 5px;
+}
+.page-header a:hover { background-color: #9f6138; }
+.page-header a:active { background-color: LightGray; }
+
+/* ----- Contact Form ----- */
+form h4 {
+	font-family: 'Open Sans Condensed', sans-serif;
+	margin-top: 15px;
+	margin-bottom: 5px;
+	font-size: large;
+	font-weight: normal;
+}
+form > div:last-of-type { text-align: right; }
+
+.grouping { 
+	display: flex;
+	flex-wrap: wrap;
+	margin-bottom: 15px;
+}
+.grouping div {	
+	flex-shrink: 0;
+	margin-right: 5px;
+}
+.grouping label { 
+	flex: 1 0 auto; 
+	margin-left: 1px;
+}
+
+fieldset legend { 
+	font-family: 'Open Sans Condensed', sans-serif;
+	font-size: large;
+	letter-spacing: 0.2em;
+}
+fieldset,
+fieldset div { 
+	display: flex;
+	flex-wrap: wrap;
+	margin-bottom: 10px; 
+}
+fieldset div label { flex: 0 1 165px; }
+fieldset div input { flex: 1 0 50%; }
+
+fieldset div:last-child { margin-bottom: 0; }
+fieldset div input { margin-left: 15px; }
+input[type="submit"] {
+	background-color: #9f6138;
+	color: white;
+	font-family: 'Open Sans Condensed', sans-serif;
+	font-size: large;
+	letter-spacing: 0.2em;
+}
+/* ----- Page Footer ----- */
+.page-footer { 
+	text-align: center;
+	margin: 20px 0; 
+}
+.page-footer a { 
+	font-family:  Palatino, Times, serif; 
+	line-height: 1.4em;
+	padding: 5px;
+	font-size: 0.7em;
+}
+
+/* ----- Main Menu ----- */
+.main-menu { margin-bottom: 55px; }
+.main-menu ul {
+  list-style: none;
+  margin-left: 0;
+  padding-left: 0;
+  display: flex;
+}
+.main-menu a { padding: 5px; }
+
+.main-menu li { margin-right: 2%; }
+
+.main-menu li:last-child a { 
+	color: #9f6138;
+	font-weight: bold;
+}
+
+.is-current { 
+	background-color: #9f6138; 
+	color: white;
+}
+.main-menu li:last-child a.is-current { color: white; }
